@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "405344669628",
+    "firebase_url": "https://mi-primera-app-mel.firebaseio.com",
+    "project_id": "mi-primera-app-mel",
+    "storage_bucket": "mi-primera-app-mel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405344669628:android:94290e829ee4cf09",
+        "android_client_info": {
+          "package_name": "com.example.mi_primer_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405344669628-6dohedhsa3b1q5u30730s48ha8qk3hap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mi_primer_firebase",
+            "certificate_hash": "0b6dfb5dc7b298c283582160368835a422e373dc"
+          }
+        },
+        {
+          "client_id": "405344669628-ip4vc52u8kjlrvrij2f366j73pimb9it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrMtDp5eBQt3ag23sFvayi9FFp1_rOLkk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405344669628-ip4vc52u8kjlrvrij2f366j73pimb9it.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
