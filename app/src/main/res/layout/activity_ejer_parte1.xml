@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Ver"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:onClick="clickVer"/>
     </LinearLayout>
 
     <TextView
@@ -54,7 +55,7 @@
         android:layout_margin="20dp"/>
 
     <TextView
-        android:id="@+id/tvPuesto"
+        android:id="@+id/tvSueldo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

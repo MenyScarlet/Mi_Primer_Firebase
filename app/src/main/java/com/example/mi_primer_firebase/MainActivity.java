@@ -25,4 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public  void clickEjerPart1 (View view){
+        Intent i= new Intent(getApplicationContext(),EjerParte1Activity.class);
+        startActivity(i);
+
+    }
+
 }
