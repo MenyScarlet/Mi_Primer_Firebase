@@ -28,4 +28,11 @@
         android:layout_height="wrap_content"
         android:text="Parte2"
         android:onClick="clickParte2"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parte3: Insertar, Modificar y Eliminar"
+        android:onClick="clickParte3"/>
 </LinearLayout>

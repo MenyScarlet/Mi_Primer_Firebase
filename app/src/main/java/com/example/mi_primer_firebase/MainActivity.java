@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void clickParte3 (View view){
+        Intent i= new Intent(getApplicationContext(),Parte3Activity.class);
+        startActivity(i);
+    }
+
 }
