@@ -54,32 +54,42 @@ public class Parte3Activity extends AppCompatActivity {
     public void clickGuardar (View view){
 
         String nombre = etNombre.getText().toString();
-        String dorsal = etDorsal.getText().toString();
+        String strDorsal = etDorsal.getText().toString();
         String posicion = etPosicion.getText().toString();
-        String sueldo = etSueldo.getText().toString();
+        String strSueldo = etSueldo.getText().toString();
 
-        if(nombre.equals("") || dorsal.equals("") || posicion.equals("") || sueldo.equals("")){
+        if(nombre.equals("") || strDorsal.equals("") || posicion.equals("") || strSueldo.equals("")){
 
             Toast.makeText(getApplicationContext(), "Debes de completar todos los campos",
                     Toast.LENGTH_LONG).show();
 
-        }/*else{
+        }else{
+
+            int dorsal = Integer.parseInt(strDorsal);
+            double sueldo = Double.parseDouble(strSueldo);
+            Jugador nuevoJugador = new Jugador(nombre, dorsal, posicion, sueldo);
             dbRef = FirebaseDatabase.getInstance().getReference().child("jugadores");
         }
-        //String nueva clave = dbRef().setValue
-        dbRef.child("j4").setValue(nuevoJugador, (new DatabaseReference.CompletionListener)){
+        /*String nueva_clave = dbRef().push().setvalue(nuevojugador, new DatabaseReference.
+        CompletionListener(){*/
+            dbRef.child("j5").setValue(nuevoJugador, new DatabaseReference.CompletionListener(){
+
             public void onComplete(DatabaseError error, DatabaseReference ref){
+
                 if(error == null) {
-                    Toast.makeText(getApplicationContext(), "Rellena todos los campos",
+
+                    Toast.makeText(getApplicationContext(), "INSERTADO CORRECTAMENTE",
                             Toast.LENGTH_LONG).show();
 
                     limpiarFormulario();
+
                 }else{
+
                     Toast.makeText(getApplicationContext(), "NO SE PUEDE INSERTAR EL JUGADOR",
                             Toast.LENGTH_LONG).show();
                 }
             }
-        }*/
+        });
 
 
     }

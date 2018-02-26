@@ -33,7 +33,7 @@ public class Parte1Activity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 Jugador jug = dataSnapshot.getValue(Jugador.class);
-                //Aqui podemos acer lo que queramos con los datos de la Database.
+                //Aqui podemos hacer lo que queramos con los datos de la Database.
                 tvJugador.setText(
                         "Nombre: "+jug.getNombre()+ "\n" +
                         "Dorsal: " + jug.getDorsal() + "\n" +
