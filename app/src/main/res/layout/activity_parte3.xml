@@ -28,8 +28,8 @@
             android:onClick="clickSearch"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/Parte3_tvNombre"
+    <EditText
+        android:id="@+id/Parte3_etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre"
@@ -37,8 +37,8 @@
         android:textSize="18dp"
         android:layout_margin="5dp"/>
 
-    <TextView
-        android:id="@+id/Parte3_tvDorsal"
+    <EditText
+        android:id="@+id/Parte3_etDorsal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Dorsal"
@@ -46,8 +46,8 @@
         android:textSize="18dp"
         android:layout_margin="5dp"/>
 
-    <TextView
-        android:id="@+id/Parte3_tvPosicion"
+    <EditText
+        android:id="@+id/Parte3_etPosicion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Posición"
@@ -55,8 +55,8 @@
         android:textSize="18dp"
         android:layout_margin="5dp"/>
 
-    <TextView
-        android:id="@+id/Parte3_tvSueldo"
+    <EditText
+        android:id="@+id/Parte3_etSueldo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Sueldo"

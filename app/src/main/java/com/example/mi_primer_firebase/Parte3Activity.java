@@ -11,22 +11,27 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class Parte3Activity extends AppCompatActivity {
 
-    TextView tvNombre, tvDorsal, tvPosicion, tvSueldo;
+    TextView etNombre, etDorsal, etPosicion, etSueldo;
     Spinner spId;
+
+    DatabaseReference dbRef;
+    ValueEventListener valueEventListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parte3);
 
-        tvNombre = (TextView)findViewById(R.id.Parte3_tvNombre);
-        tvDorsal = (TextView)findViewById(R.id.Parte3_tvDorsal);
-        tvPosicion = (TextView)findViewById(R.id.Parte3_tvPosicion);
-        tvSueldo = (TextView)findViewById(R.id.Parte3_tvSueldo);
+        etNombre = (TextView)findViewById(R.id.Parte3_etNombre);
+        etDorsal = (TextView)findViewById(R.id.Parte3_etDorsal);
+        etPosicion = (TextView)findViewById(R.id.Parte3_etPosicion);
+        etSueldo = (TextView)findViewById(R.id.Parte3_etSueldo);
         spId = (Spinner)findViewById(R.id.Parte3_spId);
 
         String [] idJugadores = {"Seleccionar", "j1", "j2", "j3", "j4"};
@@ -35,20 +40,30 @@ public class Parte3Activity extends AppCompatActivity {
 
         spId.setAdapter(adaptador);
 
+        dbRef = FirebaseDatabase.getInstance().getReference()
+                .child("jugadores");
+
     }//FIN OnCreate
 
     public void clickSearch (View view){
 
-        String spIdJugador = spId.getSelectedItem().set
+        //String spIdJugador = spId.getSelectedItem().set
 
     }
 
     public void clickGuardar (View view){
 
-        String nombre = tvNombre
-        if(){
+        String nombre = etNombre.getText().toString();
+        String dorsal = etDorsal.getText().toString();
+        String posicion = etPosicion.getText().toString();
+        String sueldo = etSueldo.getText().toString();
 
-        }else{
+        if(nombre.equals("") || dorsal.equals("") || posicion.equals("") || sueldo.equals("")){
+
+            Toast.makeText(getApplicationContext(), "Debes de completar todos los campos",
+                    Toast.LENGTH_LONG).show();
+
+        }/*else{
             dbRef = FirebaseDatabase.getInstance().getReference().child("jugadores");
         }
         //String nueva clave = dbRef().setValue
@@ -64,7 +79,7 @@ public class Parte3Activity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
                 }
             }
-        }
+        }*/
 
 
     }
@@ -76,13 +91,18 @@ public class Parte3Activity extends AppCompatActivity {
 
     public void clickEliminar (View view){
 
-        spId.getSelectedItemPosition(0);
-        tvNombre.setText("");
-        tvDorsal.setText("");
-        tvPosicion.setText("");
-        tvSueldo.setText("");
+        limpiarFormulario();
 
 
+    }
+
+    private void limpiarFormulario (){
+
+        spId.setSelection(0);
+        etNombre.setText("");
+        etDorsal.setText("");
+        etPosicion.setText("");
+        etSueldo.setText("");
     }
 
 

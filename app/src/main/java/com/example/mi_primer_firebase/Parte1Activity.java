@@ -26,7 +26,7 @@ public class Parte1Activity extends AppCompatActivity {
         tvJugador = (TextView)findViewById(R.id.tvJugador);
 
         dbRef = FirebaseDatabase.getInstance().getReference()
-                .child("personas/jugadores/j1");
+                .child("jugadores/j1/j2/j3/j4");
 
         valueEventListener = new ValueEventListener() {
             @Override
